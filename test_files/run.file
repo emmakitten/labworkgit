@@ -1,0 +1,33 @@
+mark=start
+
+mark=output
+atoms_charged=( segid eq "D" )
+name="L"
+mark=output
+atoms_charged=( segid eq "A" || segid eq "B" || segid eq "C" || segid eq "E" || segid eq "W" )
+name="R"
+
+mark=final
+name_group="bound_L"
+atoms_charged=( segid eq "D" )
+atoms_shape=all
+atoms_center=( segid eq "D" )
+
+mark=final
+name_group="bound_R"
+atoms_charged=( segid eq "A" || segid eq "B" || segid eq "C" || segid eq "E" || segid eq "W" )
+atoms_shape=all
+atoms_center=( segid eq "D" )
+
+mark=reference
+name_group="unbound_L"
+atoms_charged=( segid eq "D" )
+atoms_shape=( segid eq "D" )
+atoms_center=(segid eq "D" )
+
+mark=reference
+name_group="unbound_R"
+atoms_charged=( segid eq "A" || segid eq "B" || segid eq "C" || segid eq "E" || segid eq "W" )
+atoms_shape=( segid eq "A" || segid eq "B" || segid eq "C" || segid eq "E" || segid eq "W" )
+atoms_center=( segid eq "D" )
+
