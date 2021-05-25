@@ -1,0 +1,60 @@
+all residues ionized as normal, but for histidines:
+
+Type a number:0
+Which HISTIDINE type do you want for residue 19
+0. H on ND1 only (HSD)
+1. H on NE2 only (HSE)
+2. H on ND1 and NE2 (HSP)
+3. Coupled to Heme (HSD)
+
+Type a number:2
+
+
+
+Which HISTIDINE type do you want for residue 68
+0. H on ND1 only (HSD)
+1. H on NE2 only (HSE)
+2. H on ND1 and NE2 (HSP)
+3. Coupled to Heme (HSD)
+
+Type a number:1
+
+
+
+Which HISTIDINE type do you want for residue 134
+0. H on ND1 only (HSD)
+1. H on NE2 only (HSE)
+2. H on ND1 and NE2 (HSP)
+3. Coupled to Heme (HSD)
+
+Type a number:1
+
+
+
+Which HISTIDINE type do you want for residue 148
+0. H on ND1 only (HSD)
+1. H on NE2 only (HSE)
+2. H on ND1 and NE2 (HSP)
+3. Coupled to Heme (HSD)
+
+Type a number:1
+
+
+
+Which HISTIDINE type do you want for residue 169
+0. H on ND1 only (HSD)
+1. H on NE2 only (HSE)
+2. H on ND1 and NE2 (HSP)
+3. Coupled to Heme (HSD)
+
+Type a number:1
+
+
+
+Which HISTIDINE type do you want for residue 263
+0. H on ND1 only (HSD)
+1. H on NE2 only (HSE)
+2. H on ND1 and NE2 (HSP)
+3. Coupled to Heme (HSD)
+
+Type a number:2
