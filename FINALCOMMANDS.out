@@ -1,0 +1,24 @@
+NEED TO HAVE THE genion.mdp, min.mdp, and md.mdp files already in your directory before running these 
+
+  IF YOU ARE ON SILICON THEN RUN:
+/usr/local/gromacs/bin/GMXRC
+first.
+AND ALWAYS, ALWAYS RUN:
+/usr/local/gromacs/bin/gmx instead of the delmore one!!
+
+NOTE: when running pdb2gmx make sure to:
+[CHOOSE TIP3P WATER MODEL HERE *UNLESS* you want to compare directly with Aliyah's results -- in which case choose spc;  unfortunately she accidentally did her simulatins using spc when Chi and I had used tip3p...!!]
+********when running pdb2gmx choose charmm36-mar2019.ff
+
+
+  gmx editconf -f complex.gro -o complex_box.gro -bt cubic -d 1.2
+  cp complex.top complex_water.top
+  gmx solvate -cp complex_box.gro -cs spc216.gro -o complex_water.gro -p complex_water.top   [CHOOSE TIP3P WATER MODEL HERE *UNLESS* you want to compare directly with Aliyah's results -- in which case choose spc;  unfortunately she accidentally did her simulatins using spc when Chi and I had used tip3p...!!]
+  gmx grompp -f genion.mdp -o genion.tpr -c complex_water.gro -p complex_water.top
+  cp complex_water.top complex_ions.top
+  gmx genion -s genion.tpr -o complex_ions.gro -p complex_ions.top -neutral -conc 0.145 -pname NA -nname CL 
+  gmx grompp -f min.mdp -o min.tpr -c complex_ions.gro -p complex_ions.top
+
+[then run the minimization with mdrun, and then do the grompp of the md.mdp file and then do mdrun for the actual simulation.
+
+NOTE: do not do subfast for the simulation.  Do "nohup /usr/local/gromacs/bin/gmx mdrun xxxxxxxxxx &" -- so it will run in th ebackground and you can log out with it still running.
